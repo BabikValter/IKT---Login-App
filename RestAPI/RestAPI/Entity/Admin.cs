@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DefaultNamespace
+namespace RestAPI.Entity
 {
     [Table("Admin")]
     public class Admin : User

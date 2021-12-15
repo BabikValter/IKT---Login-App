@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DefaultNamespace
+namespace RestAPI.Entity
 {
     [Table("Users")]
     public class User : EntityBase
