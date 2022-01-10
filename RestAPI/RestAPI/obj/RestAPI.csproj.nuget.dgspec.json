@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\domiv\\Source\\Repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj": {}
+    "C:\\Users\\domiv\\source\\repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\domiv\\Source\\Repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj": {
+    "C:\\Users\\domiv\\source\\repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\domiv\\Source\\Repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj",
+        "projectUniqueName": "C:\\Users\\domiv\\source\\repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj",
         "projectName": "RestAPI",
-        "projectPath": "C:\\Users\\domiv\\Source\\Repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj",
+        "projectPath": "C:\\Users\\domiv\\source\\repos\\IKT---Login-App\\RestAPI\\RestAPI\\RestAPI.csproj",
         "packagesPath": "C:\\Users\\domiv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\domiv\\Source\\Repos\\IKT---Login-App\\RestAPI\\RestAPI\\obj\\",
+        "outputPath": "C:\\Users\\domiv\\source\\repos\\IKT---Login-App\\RestAPI\\RestAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
