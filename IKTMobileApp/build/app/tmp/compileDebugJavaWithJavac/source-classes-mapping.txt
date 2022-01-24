@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-iktprojekt/co/hu/ikt_login/BuildConfig.java
- iktprojekt.co.hu.ikt_login.BuildConfig
