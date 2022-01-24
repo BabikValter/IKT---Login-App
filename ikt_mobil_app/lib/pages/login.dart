@@ -35,7 +35,14 @@ class _LoginState extends State<Login> {
                   hintText: 'Add meg a jelszavad',
                 ),
               ),
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: TextButton(
+                onPressed: null,
+                child: Text('Bejelentkezés'),
+              ),
+            ),
           ],
         )
       )
