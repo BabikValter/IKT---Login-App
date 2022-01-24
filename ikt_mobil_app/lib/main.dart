@@ -8,8 +8,8 @@ void main() => runApp(MaterialApp(
   initialRoute: '/login',
   routes: {
     '/': (context) => Loading(),
-    '/home': (context) => Dates(),
     '/login': (context) => Login(),
+    '/dates': (context) => Dates(),
     '/addDate': (context) => AddDate()
   },
 ));

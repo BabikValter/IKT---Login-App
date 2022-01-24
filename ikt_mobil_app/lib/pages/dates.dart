@@ -10,6 +10,18 @@ class Dates extends StatefulWidget {
 class _DatesState extends State<Dates> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Lefoglalt időpontok"),
+        backgroundColor: Colors.green[800],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.add
+        ),
+        backgroundColor: Colors.green[800],
+      ),
+    );
   }
 }
