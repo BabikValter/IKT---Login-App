@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "iktprojekt.co.hu.ikt_login",
+  "variantName": "debug",
+  "elements": []
+}
