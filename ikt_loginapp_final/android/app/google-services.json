@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044704038728",
+    "project_id": "ikt-login",
+    "storage_bucket": "ikt-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044704038728:android:3dd33459d1ec7e1cbc6d7d",
+        "android_client_info": {
+          "package_name": "com.ikt.ikt_loginapp_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044704038728-hqo3cma6sb020prsqc1ode2udb628hbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0qDX2VxU_vsrr6Z35uYGo3UQjEXLlPNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044704038728-hqo3cma6sb020prsqc1ode2udb628hbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
