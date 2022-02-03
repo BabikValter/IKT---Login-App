@@ -3,16 +3,16 @@ import 'package:ikt_loginapp_final/services/auth.dart';
 import 'package:ikt_loginapp_final/shared/constants.dart';
 import 'package:ikt_loginapp_final/shared/loading.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   final Function toggleView;
-  const SignIn({ Key? key, required this.toggleView }) : super(key: key);
+  const Register({ Key? key, required this.toggleView }) : super(key: key);
 
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-class _SignInState extends State<SignIn> {
-
+class _RegisterState extends State<Register> {
+  
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
@@ -29,11 +29,11 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: const Text('Bejelentkezés'),
+        title: const Text('Regisztráció'),
         actions: <Widget>[
           TextButton.icon(
             icon: const Icon(Icons.person),
-            label: const Text('Regisztráció'),
+            label: const Text('Bejelentkezés'),
             onPressed: () {
               widget.toggleView();
             },
@@ -56,7 +56,7 @@ class _SignInState extends State<SignIn> {
               ),
               const SizedBox(height: 20.0),
               TextFormField(
-                decoration: textInputDecoration('Jelszó'), 
+                decoration: textInputDecoration('Jelszó'),
                 obscureText: true,
                 validator: (val) => val!.length < 6 ? 'Enter a pasword 6+ chars long' : null,
                 onChanged: (val) {
@@ -66,7 +66,7 @@ class _SignInState extends State<SignIn> {
               const SizedBox(height: 20.0),
               ElevatedButton(
                 child: const Text(
-                  'Bejelentkezés',
+                  'Regisztálás',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -77,10 +77,10 @@ class _SignInState extends State<SignIn> {
                 onPressed: () async {
                   if (_formKey.currentState!.validate()) {
                     setState(() => loading = true);
-                    dynamic result = await _auth.signInWithEmailAndPassword(email, password);
+                    dynamic result = await _auth.registerWithEmailAndPassword(email, password);
                     if (result == null) {
-                      setState(() { 
-                        error = 'Wrong creditentials';
+                      setState(() {
+                        error = 'Please enter a valid email';
                         loading = false;
                       });
                     }
