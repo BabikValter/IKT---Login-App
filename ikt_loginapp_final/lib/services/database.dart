@@ -6,7 +6,6 @@ class DatabaseService {
   final String? uid;
   DatabaseService({ this.uid });
 
-  // collection reference
   final CollectionReference orvosCollection = FirebaseFirestore.instance.collection('orvos');
 
   Future updateUserData(String name, DateTime idopont, String orvos) async {
@@ -17,7 +16,6 @@ class DatabaseService {
     });
   }
 
-  // brew list from snapshot
   List<Vizsgalat> _vizsgalatListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
       return Vizsgalat(
@@ -28,9 +26,7 @@ class DatabaseService {
     }).toList();
   }
   
-
-  // get brews streams
-  Stream<List<Vizsgalat>> get brews {
+  Stream<List<Vizsgalat>> get vizsgalatok {
     return orvosCollection.snapshots()
       .map(_vizsgalatListFromSnapshot);
   }

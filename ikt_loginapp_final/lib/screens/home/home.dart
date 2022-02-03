@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return StreamProvider<List<Vizsgalat>>.value(
-      value: DatabaseService().brews,
+      value: DatabaseService().vizsgalatok,
       initialData: const [],
       child: Scaffold(
         backgroundColor: Colors.brown[50],
