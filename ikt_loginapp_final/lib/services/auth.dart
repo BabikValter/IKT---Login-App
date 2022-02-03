@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:ikt_loginapp_final/models/auser.dart';
+import 'package:ikt_loginapp_final/services/database.dart';
 
 class AuthService {
 
@@ -47,6 +48,9 @@ class AuthService {
     try{
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
+
+      // create document for user with the uid
+      await DatabaseService(uid: user!.uid).updateUserData('0', 'new crew member', 100);
       return _userFromFirebaseUser(user);
     } catch(e) {
       debugPrint(e.toString());
