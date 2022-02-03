@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ikt_loginapp_final/models/brew.dart';
+import 'package:ikt_loginapp_final/models/vizsgalat.dart';
+import 'package:ikt_loginapp_final/screens/home/Vizsgalat_list.dart';
 import 'package:ikt_loginapp_final/services/auth.dart';
 import 'package:ikt_loginapp_final/services/database.dart';
 import 'package:provider/provider.dart';
@@ -11,7 +12,8 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<List<Brew>>.value(
+
+    return StreamProvider<List<Vizsgalat>>.value(
       value: DatabaseService().brews,
       initialData: const [],
       child: Scaffold(
@@ -27,9 +29,10 @@ class Home extends StatelessWidget {
               onPressed: () async {
                 await _auth.signOut();
               },
-            )
-          ],
+            ),
+          ]
         ),
+        body: const VizsgalatList(),
       ),
     );
   }

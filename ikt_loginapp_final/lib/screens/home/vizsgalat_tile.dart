@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ikt_loginapp_final/models/brew.dart';
+import 'package:ikt_loginapp_final/models/vizsgalat.dart';
 
-class BrewTile extends StatelessWidget {
-  final Brew brew;
-  const BrewTile({ Key? key, required this.brew }) : super(key: key);
+class VizsgalatTile extends StatelessWidget {
+  final Vizsgalat viszgalat;
+  const VizsgalatTile({ Key? key, required this.viszgalat }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +14,9 @@ class BrewTile extends StatelessWidget {
         child: ListTile(
           leading: CircleAvatar(
             radius: 25.0,
-            backgroundColor: Colors.brown[brew.strength],
+            backgroundColor: Colors.brown[100],
           ),
-          title: Text(brew.name),
-          subtitle: Text('Takes ${brew.sugars} sugars(s)'),
+          title: Text(viszgalat.name),
         ),
       ),
     );

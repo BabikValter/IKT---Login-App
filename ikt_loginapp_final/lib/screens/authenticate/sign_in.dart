@@ -48,17 +48,17 @@ class _SignInState extends State<SignIn> {
             children: <Widget>[
               const SizedBox(height: 20.0),
               TextFormField(
-                decoration: textInputDecoration('Email'),
-                validator: (val) => val!.isEmpty ? 'Enter an email' : null,
+                decoration: textInputDecoration.copyWith(hintText: 'Email'),
+                validator: (val) => val!.isEmpty ? 'Adj meg egy Email címet' : null,
                 onChanged: (val) {
                   setState(() => email = val);
                 },
               ),
               const SizedBox(height: 20.0),
               TextFormField(
-                decoration: textInputDecoration('Jelszó'), 
+                decoration: textInputDecoration.copyWith(hintText: 'Jelszó'),
                 obscureText: true,
-                validator: (val) => val!.length < 6 ? 'Enter a pasword 6+ chars long' : null,
+                validator: (val) => val!.length < 6 ? 'Legalább 6+ karakteres legyen a jelszó' : null,
                 onChanged: (val) {
                   setState(() => password = val);
                 },
@@ -80,7 +80,7 @@ class _SignInState extends State<SignIn> {
                     dynamic result = await _auth.signInWithEmailAndPassword(email, password);
                     if (result == null) {
                       setState(() { 
-                        error = 'Wrong creditentials';
+                        error = 'Helytelen adatok';
                         loading = false;
                       });
                     }

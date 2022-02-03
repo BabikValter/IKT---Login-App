@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
-InputDecoration textInputDecoration(String hint) {
-  return InputDecoration(
-    hintText: hint,
+const textInputDecoration = InputDecoration(
     fillColor: Colors.white,
     filled: true,
-    enabledBorder: const OutlineInputBorder(
+    enabledBorder: OutlineInputBorder(
       borderSide: BorderSide(color: Colors.white, width: 2.0)
     ),
-    focusedBorder: const OutlineInputBorder(
+    focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: Colors.pink, width: 2.0)
     ),
-  );
-}
+);

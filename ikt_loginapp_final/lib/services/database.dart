@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ikt_loginapp_final/models/brew.dart';
+import 'package:ikt_loginapp_final/models/vizsgalat.dart';
 
 class DatabaseService {
 
@@ -7,31 +7,31 @@ class DatabaseService {
   DatabaseService({ this.uid });
 
   // collection reference
-  final CollectionReference brewCollection = FirebaseFirestore.instance.collection('brews');
+  final CollectionReference orvosCollection = FirebaseFirestore.instance.collection('orvos');
 
-  Future updateUserData(String sugars, String name, int strength) async {
-    return await brewCollection.doc(uid).set({
-      'sugars': sugars,
+  Future updateUserData(String name, DateTime idopont, String orvos) async {
+    return await orvosCollection.doc(uid).set({
       'name': name,
-      'strength': strength
+      'idopont': idopont,
+      'orvos': orvos
     });
   }
 
   // brew list from snapshot
-  List<Brew> _brewListFromSnapshot(QuerySnapshot snapshot) {
+  List<Vizsgalat> _vizsgalatListFromSnapshot(QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
-      return Brew(
+      return Vizsgalat(
         name: doc.get('name') ?? '',
-        strength: doc.get('strength') ?? 0,
-        sugars: doc.get('sugars') ?? '0'
+        idopont: doc.get('idopont') ?? '',
+        orvos: doc.get('orvos') ?? ''
       );
     }).toList();
   }
   
 
   // get brews streams
-  Stream<List<Brew>> get brews {
-    return brewCollection.snapshots()
-      .map(_brewListFromSnapshot);
+  Stream<List<Vizsgalat>> get brews {
+    return orvosCollection.snapshots()
+      .map(_vizsgalatListFromSnapshot);
   }
 }
