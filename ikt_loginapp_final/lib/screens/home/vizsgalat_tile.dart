@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ikt_loginapp_final/models/vizsgalat.dart';
+import 'package:intl/intl.dart';
 
 class VizsgalatTile extends StatelessWidget {
   final Vizsgalat viszgalat;
@@ -17,6 +18,7 @@ class VizsgalatTile extends StatelessWidget {
             backgroundColor: Colors.brown[100],
           ),
           title: Text(viszgalat.name),
+          subtitle: Text(viszgalat.orvos + " - " + DateFormat("yyyy-MM-dd, HH:mm").format(viszgalat.idopont.toDate())),
         ),
       ),
     );

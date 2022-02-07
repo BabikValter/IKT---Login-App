@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:ikt_loginapp_final/models/auser.dart';
-import 'package:ikt_loginapp_final/services/database.dart';
 
 class AuthService {
 
@@ -16,18 +15,6 @@ class AuthService {
   Stream<AUser?> get user {
     return _auth.authStateChanges()
       .map(_userFromFirebaseUser);
-  }
-
-  // sign in anon
-  Future signInAnon() async {
-    try {
-      UserCredential result =  await _auth.signInAnonymously();
-      User? user = result.user;
-      return _userFromFirebaseUser(user);
-    } catch(e) {
-      debugPrint(e.toString());
-      return null;
-    }
   }
 
   // sign in email
@@ -50,7 +37,7 @@ class AuthService {
       User? user = result.user;
 
       // create document for user with the uid
-      await DatabaseService(uid: user!.uid).updateUserData('vizsgálat', DateTime(2000, 1, 1, 1, 1), 'Dr. Jani');
+      // await DatabaseService(uid: user!.uid).updateUserData('vizsgálat', DateTime(2000, 1, 1, 1, 1), 'Dr. Jani');
       return _userFromFirebaseUser(user);
     } catch(e) {
       debugPrint(e.toString());
